@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
+import { motion } from 'framer-motion';
 
 export default function LogoutButton() {
   const router = useRouter();
@@ -14,11 +15,13 @@ export default function LogoutButton() {
   }, [router]);
 
   return (
-    <button
+    <motion.button
       onClick={handleLogout}
-      className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition w-max text-left"
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className="bg-red-600 text-white px-4 py-2 mt-5 rounded-md hover:bg-red-700 transition text-sm sm:text-base w-[100px] sm:w-max block mx-auto"
     >
       🔓 Logout
-    </button>
+    </motion.button>
   );
 }

@@ -47,12 +47,14 @@ export default function Sidebar() {
     <>
       {/* Mobile Menu Button */}
       {isMobile && (
-        <button
-          className="fixed top-4 left-4 text-lg z-[1100] bg-blue-700 text-white px-4 py-2 rounded-md shadow-lg"
-          onClick={() => setOpen(true)}
-        >
-          ☰ Menu
-        </button>
+   <button
+   className="fixed top-6 left-4 text-lg z-[50] bg-black text-white px-4 py-2 rounded-md shadow-lg md:hidden"
+   onClick={() => setOpen(true)}
+ >
+   ☰
+ </button>
+ 
+     
       )}
 
       {/* Overlay for Mobile */}

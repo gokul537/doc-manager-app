@@ -27,10 +27,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-gray-50 text-gray-900">
         <div className="min-h-screen flex flex-col">
           {/* Header */}
-          <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold ml-36 md:ml-0">📄 Doc Manager</h1>
+          <header className="bg-blue-600 text-white px-4 py-6 relative z-[50]">
+            <h1 className="text-xl font-bold text-center">📄 Doc Manager</h1>
             {!isAuthPage && isLoggedIn && <LogoutButton />}
           </header>
+
+
 
           {/* Main content */}
           <main className="flex-1 p-4">{children}</main>
